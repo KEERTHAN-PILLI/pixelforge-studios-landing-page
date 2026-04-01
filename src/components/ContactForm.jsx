@@ -9,6 +9,7 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
+  // [FORM VALIDATION] Ensures fields meet minimum requirements before submission
   const validate = () => {
     let tempErrors = {};
     if (!formData.name.trim()) tempErrors.name = "Name is required";
@@ -38,7 +39,7 @@ const ContactForm = () => {
       setTimeout(() => {
         setIsSubmitting(false);
         setIsSuccess(true);
-        // Track the lead with analytics
+        // [EVENT TRACKING] Fire Form Submission (Lead) Analytics Event upon successful validation
         const domain = formData.email.split('@')[1];
         trackLead(domain);
         // Reset form

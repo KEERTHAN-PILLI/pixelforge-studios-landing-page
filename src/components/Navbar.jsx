@@ -22,6 +22,7 @@ const Navbar = () => {
     { name: 'Testimonials', to: 'testimonials' },
   ];
 
+  // [EVENT TRACKING] Track CTA button clicks across the viewport
   const handleQuoteClick = () => {
     trackCTAClick('Navbar_GetQuote');
     const contactSection = document.getElementById('contact');

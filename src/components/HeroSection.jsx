@@ -31,6 +31,7 @@ const HeroSection = () => {
             We build immersive worlds, stunning assets, and unparalleled experiences for gamers and creators worldwide. Your vision, leveled up.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
+            {/* [EVENT TRACKING] Logs Hero CTA click to GA4 and Meta Pixel */}
             <Link 
               to="contact" 
               smooth={true} 
