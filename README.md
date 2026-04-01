@@ -1,0 +1,60 @@
+# PixelForge Studios - Landing Page
+
+A complete, production-ready, fully responsive landing page built for PixelForge Studios, an Animation & Gaming company.
+
+## Project Overview
+
+PixelForge Studios serves B2B (Game Studios), B2C (Gamers), and D2C (Direct Buyers) audiences. This landing page is designed to cater to all three segments with a dark, modern gaming aesthetic, smooth animations, and robust lead capture.
+
+## Features
+- **Modern UI Edge**: Dark mode, neon glows, glassmorphism, and custom gaming typographies.
+- **Fully Responsive**: Fluid scaling from mobile to desktop using Tailwind CSS.
+- **Interactive Animations**: Scroll reveals and hover effects powered by Framer Motion.
+- **Client-Side Validation**: Robust contact form ensuring data integrity before transmission.
+- **Built-in Tracking Hooks**: Google Analytics (GA4) and Meta Pixel integrations out of the box.
+
+## Tech Stack
+- **React.js** (via Vite)
+- **Tailwind CSS v3** (Utility-first styling)
+- **Framer Motion** (Animations)
+- **Lucide React** (Icons)
+- **React Scroll** (Smooth anchor navigation)
+
+## Setup Instructions
+1. Clone the repository.
+2. Ensure Node.js is installed.
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+5. View the app at `http://localhost:5173`.
+
+## Deployment Steps (Vercel / Netlify)
+This project is configured out-of-the-box for standard Vite deployments.
+
+**Netlify:**
+- Connect your GitHub repository to Netlify.
+- Build command: `npm run build`
+- Publish directory: `dist`
+
+**Vercel:**
+- Import project from GitHub.
+- Vercel will automatically detect Vite. Use default settings.
+
+## Analytics Implementation
+Analytics placeholders for Google Analytics (GA4) and Meta Pixel (Facebook Pixel) are actively integrated. The logic is centralized in `src/utils/analytics.js`.
+
+**To activate tracking:**
+1. Open `src/utils/analytics.js`
+2. Replace `GA_MEASUREMENT_ID` with your actual GA4 Measurement ID (e.g., "G-XXXXXXX").
+3. Replace `META_PIXEL_ID` with your actual Facebook Pixel ID.
+4. Ensure you have the base standard script tags added to the `<head>` of your `index.html` as provided by Google and Meta. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
+
+### Where Events Are Triggered
+- **Page Views**: Tracked automatically upon initial load inside `App.jsx` (`useEffect` hook). (Both GA4 and Meta Pixel).
+- **Button Clicks (CTA)**: The `trackCTAClick()` function is bound to the "Get a Quote" (Navbar) and "Start Project/View Work" (Hero) buttons.
+- **Form Submissions**: On successful submission and validation of the Contact Form (`src/components/ContactForm.jsx`), the `trackLead()` function fires, creating a `Lead` event for Meta Pixel and a `form_submit` event for GA4.
