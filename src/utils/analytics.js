@@ -23,7 +23,7 @@ export const initAnalytics = () => {
 export const trackPageView = (url) => {
     // -> GA4 Page View Tracking
     if (typeof window.gtag === 'function') {
-        window.gtag('config', 'G-HXYRBS15LC', {
+        window.gtag('config', 'G-XXXXXXXXXX', {
             page_path: url,
         });
     }
