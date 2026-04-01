@@ -6,6 +6,8 @@ A complete, production-ready, fully responsive landing page built for PixelForge
 
 PixelForge Studios serves B2B (Game Studios), B2C (Gamers), and D2C (Direct Buyers) audiences. This landing page is designed to cater to all three segments with a dark, modern gaming aesthetic, smooth animations, and robust lead capture.
 
+**Live Demo:** [Insert your Netlify/Vercel URL here]
+
 ## Features
 - **Modern UI Edge**: Dark mode, neon glows, glassmorphism, and custom gaming typographies.
 - **Fully Responsive**: Fluid scaling from mobile to desktop using Tailwind CSS.
@@ -49,9 +51,9 @@ This project is configured out-of-the-box for standard Vite deployments.
 Analytics placeholders for Google Analytics (GA4) and Meta Pixel (Facebook Pixel) are actively integrated. The logic is centralized in `src/utils/analytics.js`.
 
 **To activate tracking:**
-1. Open `src/utils/analytics.js`
-2. Replace `GA_MEASUREMENT_ID` with your actual GA4 Measurement ID (e.g., "G-XXXXXXX").
-3. Replace `META_PIXEL_ID` with your actual Facebook Pixel ID.
+1. Open `index.html` and ensure your `G-XXXXXXXXXX` and `META_PIXEL_ID` scripts are present.
+2. Open `src/utils/analytics.js` and ensure the internal router is pushing to your specific `G-HXYRBS15LC` tag.
+3. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 4. Ensure you have the base standard script tags added to the `<head>` of your `index.html` as provided by Google and Meta. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 
 ### Where Events Are Triggered
