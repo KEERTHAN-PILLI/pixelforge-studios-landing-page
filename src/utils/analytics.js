@@ -4,7 +4,7 @@
  */
 
 // Placeholders for initialization (Actual scripts are in index.html)
-const GA_MEASUREMENT_ID = 'G-XXXXXXXXXX'; 
+const GA_MEASUREMENT_ID = 'G-HXYRBS15LC'; 
 const META_PIXEL_ID = 'META_PIXEL_ID';
 
 /**
@@ -23,7 +23,7 @@ export const initAnalytics = () => {
 export const trackPageView = (url) => {
     // -> GA4 Page View Tracking
     if (typeof window.gtag === 'function') {
-        window.gtag('config', 'G-XXXXXXXXXX', {
+        window.gtag('config', 'G-HXYRBS15LC', {
             page_path: url,
         });
     }
