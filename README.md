@@ -56,7 +56,32 @@ Analytics placeholders for Google Analytics (GA4) and Meta Pixel (Facebook Pixel
 3. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 4. Ensure you have the base standard script tags added to the `<head>` of your `index.html` as provided by Google and Meta. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 
-### Where Events Are Triggered
+### Where Events Are Triggered<img width="1910" height="897" alt="Screenshot 2026-04-03 082806" src="https://github.com/user-attachments/assets/2551c5df-bf82-487a-8a1b-c5657f6c09ca" />
+
 - **Page Views**: Tracked automatically upon initial load inside `App.jsx` (`useEffect` hook). (Both GA4 and Meta Pixel).
 - **Button Clicks (CTA)**: The `trackCTAClick()` function is bound to the "Get a Quote" (Navbar) and "Start Project/View Work" (Hero) buttons.
 - **Form Submissions**: On successful submission and validation of the Contact Form (`src/components/ContactForm.jsx`), the `trackLead()` function fires, creating a `Lead` event for Meta Pixel and a `form_submit` event for GA4.
+
+
+
+
+
+
+
+
+
+
+<img width="1910" height="897" alt="Screenshot 2026-04-03 082806" src="https://github.com/user-attachments/assets/a520b449-ba84-44b5-985c-9781b16b1e13" />
+
+<img width="1918" height="890" alt="Screenshot 2026-04-03 082818" src="https://github.com/user-attachments/assets/d9f7c4d3-827a-482e-8e94-92e3f58d6668" />
+
+<img width="1919" height="897" alt="Screenshot 2026-04-03 082829" src="https://github.com/user-attachments/assets/e0e0f94c-b979-42c1-851c-000d0ba7e50e" />
+
+<img width="1918" height="890" alt="Screenshot 2026-04-03 082843" src="https://github.com/user-attachments/assets/3ca0de21-ff09-431e-9666-db9c9cca8ff4" />
+
+<img width="1919" height="887" alt="Screenshot 2026-04-03 082850" src="https://github.com/user-attachments/assets/86c73582-f413-4e53-be94-c3fc97076e6f" />
+
+<img width="1919" height="890" alt="Screenshot 2026-04-03 082859" src="https://github.com/user-attachments/assets/3e33ee05-c9b9-4af9-9298-e8dd59cca490" />
+
+
+
