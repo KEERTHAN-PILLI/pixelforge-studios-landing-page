@@ -56,7 +56,7 @@ Analytics placeholders for Google Analytics (GA4) and Meta Pixel (Facebook Pixel
 3. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 4. Ensure you have the base standard script tags added to the `<head>` of your `index.html` as provided by Google and Meta. The tracking hooks here will interact with `window.gtag` and `window.fbq`.
 
-### Where Events Are Triggered<img width="1910" height="897" alt="Screenshot 2026-04-03 082806" src="https://github.com/user-attachments/assets/2551c5df-bf82-487a-8a1b-c5657f6c09ca" />
+### Where Events Are Triggered
 
 - **Page Views**: Tracked automatically upon initial load inside `App.jsx` (`useEffect` hook). (Both GA4 and Meta Pixel).
 - **Button Clicks (CTA)**: The `trackCTAClick()` function is bound to the "Get a Quote" (Navbar) and "Start Project/View Work" (Hero) buttons.
